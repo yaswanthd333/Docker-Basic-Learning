@@ -1,0 +1,12 @@
+docker pull nginx // Pull the latest nginx image from Docker Hub
+docker images // List all Docker images on the local machine
+docker pull nginx:1.26:alpine // Pull a specific version of nginx with the alpine tag
+docker run -d nginx // Run a container from the nginx image in detached mode
+docker run -d -p 9000:80 nginx // Run a container with port binding (host port 9000 to container port 80)
+docker ps // List all running containers
+docker stop container_id // Stop a running container by its ID
+docker ps -a // List all containers, including stopped ones
+docker start container_id // Start a stopped container by its ID
+docker run --name web-app -d -p 9001:80 nginx // Run a container with a specific name and port binding
+docker build -t node-app:1.0 . // Build a Docker image from a Dockerfile in the current directory with a specific tag
+docker run -d -p 3000:3000 node-app:1.0 // Run a container from the node-app image with port binding (host port 3000 to container port 3000)
